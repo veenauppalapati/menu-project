@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request
 
 app = Flask(__name__)
 
@@ -57,6 +57,14 @@ menu = {
 @app.route("/home")
 def home():
     return render_template('home.html', menu=menu)
+
+@app.route("/category", methods=["POST"])
+def select_category():
+    selected_category = request.form.get("category")
+    items = menu[selected_category]
+    return render_template("category.html", category=selected_category, items=items)
+    
+    
 
 if __name__ == "__main__":
     app.run(debug=True)

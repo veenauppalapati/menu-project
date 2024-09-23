@@ -6,13 +6,17 @@
     <title></title>
 </head>
 <body>
-    <p>Snacks: {{menu['Snacks']}}</p>
-    <h1>Snacks Menu</h1>
-    <ul>
-        {% for category in menu.keys() %}
-            <li>{{category}}</li>
-        {% endfor %}
-    </ul>
-    
+    <h1>Welcome to the variety food truck.</h1>
+
+    <div id="category-section">
+        <form action="{{url_for('select_category')}}" method="POST">
+            {% for category in menu.keys() %}
+                <input type="radio" name="category" value={{category}}>{{category}}<br>
+            {% endfor %}
+            <br>
+            <input type="submit" value="Submit">
+        </form>    
+    </div>
+ 
 </body>
 </html>

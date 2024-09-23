@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category</title>
+</head>
+<body>
+    <p>User selected <strong>{{category}}</strong></p>
+    {%  for key, val in items.items() %}
+        {% if val is mapping %}
+            {% for key2, val2 in val.items(): %}
+                <li>{{key}} - {{key2}}</li>
+            {% endfor %}
+        {% else %}
+            <li>{{key}}</li>
+        {% endif %}
+    {% endfor %}
+</body>
+</html>

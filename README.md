@@ -31,6 +31,18 @@ The Flask application is deployed on Heroku and can be accessed using the follow
 
 [Live Application on Heroku](https://menu-flask-app-7ce3cedd0dd3.herokuapp.com/)
 
+## Additional Notes
+
+### Why Use a Backend with Flask?
+
+Although this application could have been entirely developed using front-end JavaScript (since we don't require a database and the data is static), we chose to implement it with a backend using Flask to understand the process of integrating backend functionality. This approach provides valuable insights into:
+
+- Handling form submissions and user requests using server-side logic.
+
+- Managing different routes/endpoints in a web application.
+
+- Understanding how front-end and back-end components interact to create a more structured and scalable application.
+
 ---
 
 
