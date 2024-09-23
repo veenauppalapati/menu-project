@@ -22,6 +22,8 @@ To achieve this, I will use a Python web framework to handle the server-side log
 
 6. **Git**: For version control and managing your project repository
 
+7. **Heroku**: Cloud platform for deploying and hosting the web application.
+
 
 ## Getting Started 
 
