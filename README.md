@@ -25,6 +25,15 @@ To achieve this, I will use a Python web framework to handle the server-side log
 7. **Heroku**: Cloud platform for deploying and hosting the web application.
 
 
+## Deployment
+
+The Flask application is deployed on Heroku and can be accessed using the following link:
+
+[Live Application on Heroku](https://menu-flask-app-7ce3cedd0dd3.herokuapp.com/)
+
+---
+
+
 ## Getting Started 
 
 ### Setting up the environment
