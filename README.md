@@ -136,3 +136,8 @@ git remote add origin https://github.com/your-username/your-repo-name.git
 git push origin main
 
 ```
+
+## Additional Documentation
+
+- [Changelog](docs/changelog.md)
+
