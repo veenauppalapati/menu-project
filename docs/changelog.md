@@ -18,3 +18,8 @@
 
 - [More](./v-1.0.1.md)
 
+### Version 1.0.2
+
+**Goal**: Implement a data source for the application using a `menu` dictionary and test the app with **Jinja2 templating**, which allows the inclusion of logic and code-like constructs within the template using special syntax.
+
+- [More](./v-1.0.2.md)

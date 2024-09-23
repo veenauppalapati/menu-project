@@ -6,6 +6,13 @@
     <title></title>
 </head>
 <body>
-    <h1>HOME PAGE</h1>
+    <p>Snacks: {{menu['Snacks']}}</p>
+    <h1>Snacks Menu</h1>
+    <ul>
+        {% for category in menu.keys() %}
+            <li>{{category}}</li>
+        {% endfor %}
+    </ul>
+    
 </body>
 </html>
