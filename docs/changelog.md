@@ -23,3 +23,10 @@
 **Goal**: Implement a data source for the application using a `menu` dictionary and test the app with **Jinja2 templating**, which allows the inclusion of logic and code-like constructs within the template using special syntax.
 
 - [More](./v-1.0.2.md)
+
+### Version 1.0.3
+
+**Goal**:  Implement the functionality to pass the selected category from the `/home` page to a separate route using a `POST` request. This update allows the user to select a category and submit it to the backend, where the selected category is processed. The items for that category are then passed to `category.html` and displayed, allowing users to see all available items for the chosen category.
+
+- [More](./v-1.0.3.md)
+
