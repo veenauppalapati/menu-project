@@ -9,14 +9,56 @@
     <h1>Welcome to the variety food truck.</h1>
 
     <div id="category-section">
-        <form action="{{url_for('select_category')}}" method="POST">
-            {% for category in menu.keys() %}
-                <input type="radio" name="category" value={{category}}>{{category}}<br>
-            {% endfor %}
-            <br>
+        <form id="category-form">
+            <select name="category" id="category">
+                <option value=""disabled selected hidden>Choose a category</option>
+                {% for category in menu.keys() %}
+                    <option value={{category}}>{{category}}</option>
+                {% endfor %}
+            </select>
+            <br><br>
             <input type="submit" value="Submit">
         </form>    
     </div>
+
+    <div id="items-section">
+        <h2>Items</h2>
+        <ul id="items-list"></ul>
+    </div>
+
+    <script>
+        document.getElementById('category-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    const formData = new FormData(event.target);
+                    const selectedCategory = formData.get('category');
+
+                    fetch('/get-items', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                        body: new URLSearchParams({category: selectedCategory}),
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        const itemsList = document.getElementById('items-list');
+                        itemsList.innerHTML = ''; // Clear the list first
+                        data.items.forEach(item => {
+                            const listItem = document.createElement('li');
+                           
+                            
+                            listItem.innerHTML = `
+                           
+                            <span>${item.name}<span>
+                            <span>${'-'.repeat(100-(item.name).length)}</span>
+                            <span>$${item.price}${(' '.repeat(5))}</span>
+                            <button onclick="addToCart('${item.name}', ${item.price})">Add to Cart</button>`;
+                            
+                            itemsList.appendChild(listItem);
+                        });
+                    }); 
+                });
+    </script>
  
 </body>
 </html>

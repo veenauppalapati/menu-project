@@ -30,3 +30,8 @@
 
 - [More](./v-1.0.3.md)
 
+### Version 1.0.4
+
+**Goal**: Implement  functionality to retrieve data from the backend using a javascript fetch call and display it on the same page. 
+
+- [More](./v-1.0.4.md)

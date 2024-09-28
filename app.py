@@ -1,4 +1,4 @@
-from flask import Flask, render_template,request
+from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
@@ -58,11 +58,15 @@ menu = {
 def home():
     return render_template('home.html', menu=menu)
 
-@app.route("/category", methods=["POST"])
-def select_category():
+@app.route("/get-items", methods=["POST"])
+def get_items():
     selected_category = request.form.get("category")
     items = menu[selected_category]
-    return render_template("category.html", category=selected_category, items=items)
+    item_list = [{"name": key, "price": value} if not isinstance(value, dict) else {"name": f"{key} - {subkey}", "price": subval} 
+                for key, value in items.items() for subkey, subval in (value.items() if isinstance(value, dict) else [(key, value)])]
+
+  
+    return jsonify({"items": item_list})
     
     
 
