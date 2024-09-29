@@ -1,0 +1,17 @@
+
+#menu{
+    padding: 20px;
+}
+
+#items-section{
+    width: 80%;
+}
+
+.items{
+    width: calc(26.67% - 40px);
+}
+
+.quantity-input{
+    width: 40px;
+}
+

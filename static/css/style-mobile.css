@@ -1,0 +1,27 @@
+
+#menu{
+    padding: 20px;
+}
+
+#categories-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#categories-section button{
+    width: 100%;
+}
+
+#items-section{
+    width: 100%;
+}
+
+.items{
+    width: 100%;
+}
+
+.quantity-input{
+    width: 40px;
+}
+

@@ -41,3 +41,9 @@
 **Goal**: This document offers detailed insights into the frontend structure of the Variety Food Truck menu interface, covering the HTML layout, CSS styling, and the purpose of each section. The current version uses hard-coded data to establish the structure, which will later be transitioned into a dynamic webpage for a more interactive experience.
 
 - [More](./v-1.0.5.md)
+
+### Version 1.0.6
+
+**Goal**:  Implement media queries to ensure the responsive layout adapts seamlessly across a wide range of screen sizes and devices.
+
+- [More](./v-1.0.6.md)
