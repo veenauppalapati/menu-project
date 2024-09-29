@@ -1,0 +1,116 @@
+body{
+    margin: 0;
+    height: 100vh;
+}
+
+#header-section{
+    padding:10px 20px;
+    font-family: "Dancing Script", cursive;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border-bottom: 1px solid #8A704D
+}
+
+#menu{
+    margin-top: 10px;
+    display: flex; 
+    justify-content: center; 
+    background-color: black;
+}
+
+button{
+    margin: 6.5px 16px;
+    padding: 6.5px 16px;
+    border: 1px solid #8A704D;
+    color: #ffffff;
+    background-color: black;
+    font-size: 12px;
+    cursor: pointer;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button:hover{
+    background-color: #8A704D;
+}
+
+
+#data-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    position: relative;
+}
+
+#data-section::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../images/Sky-high.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#data-section h1{
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size:50px;
+    border-bottom: 1px solid #8A704D;
+}
+
+#items-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    width: 50%;
+    margin:0 auto;
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    font-weight: 700;
+}
+
+.items{
+    display: flex; 
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+    text-align:center;
+    width: calc(33.33%  - 40px);
+    border-radius: 30px;
+    box-shadow: 0px 5px 10px #888888;
+    background-color: #ffffff;
+}
+
+#cart-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+table{
+    padding: 20px;
+    font-size: 20px; 
+    background-color: white;   
+}
+
+td, th{
+    padding: 6px 15px;
+    background-color:black;
+    color: white;
+}
+
+#cart-section button{
+    margin: 20px;
+    margin-bottom: 50px;   
+}
+
