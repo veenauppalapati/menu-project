@@ -3,62 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Menu</title>
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&display=swap" rel="stylesheet">
+
+    <!-- Base Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Mobile Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-mobile.css')}}" media="screen and (max-width: 480px)">
+
+    <!-- Tablet Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-tablet.css')}}" media="screen and (min-width: 481px) and (max-width: 1024px)">
+
+    <!-- Desktop Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style-desktop.css')}}" media="screen and (min-width: 1025px)">
+    
 </head>
 <body>
-    <h1>Welcome to the variety food truck.</h1>
-
-    <div id="category-section">
-        <form id="category-form">
-            <select name="category" id="category">
-                <option value=""disabled selected hidden>Choose a category</option>
-                {% for category in menu.keys() %}
-                    <option value={{category}}>{{category}}</option>
-                {% endfor %}
-            </select>
-            <br><br>
-            <input type="submit" value="Submit">
-        </form>    
+    <div id="header-section">
+        <h1>Welcome to Variety Food truck</h1>
     </div>
 
-    <div id="items-section">
-        <h2>Items</h2>
-        <ul id="items-list"></ul>
+    <div id="menu"></div>
+        <div id="categories-section">
+            {% for category in menu.keys()%}
+                <button class="categories" value={{category}} onclick="getItems(this.value)">{{category.upper()}}</button>
+            {% endfor %}
+        </div>
     </div>
 
-    <script>
-        document.getElementById('category-form').addEventListener('submit', function(event) {
-                    event.preventDefault();
-                    const formData = new FormData(event.target);
-                    const selectedCategory = formData.get('category');
+    <div id="data-section">
+        <h1 id="category-heading"></h1>
+        <div id="items-section"></div>
+    </div>
 
-                    fetch('/get-items', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded',
-                        },
-                        body: new URLSearchParams({category: selectedCategory}),
-                    })
-                    .then(response => response.json())
-                    .then(data => {
-                        const itemsList = document.getElementById('items-list');
-                        itemsList.innerHTML = ''; // Clear the list first
-                        data.items.forEach(item => {
-                            const listItem = document.createElement('li');
-                           
-                            
-                            listItem.innerHTML = `
-                           
-                            <span>${item.name}<span>
-                            <span>${'-'.repeat(100-(item.name).length)}</span>
-                            <span>$${item.price}${(' '.repeat(5))}</span>
-                            <button onclick="addToCart('${item.name}', ${item.price})">Add to Cart</button>`;
-                            
-                            itemsList.appendChild(listItem);
-                        });
-                    }); 
-                });
-    </script>
- 
+    <!-- Javascript -->
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
 </body>
 </html>

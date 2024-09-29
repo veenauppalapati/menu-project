@@ -47,3 +47,9 @@
 **Goal**:  Implement media queries to ensure the responsive layout adapts seamlessly across a wide range of screen sizes and devices.
 
 - [More](./v-1.0.6.md)
+
+### Version 1.0.7
+
+**Goal**: Implement dynamic functionality for the webpage by fetching data from the backend and integrating it with the existing frontend structure. This version focuses on the implementation of the `/get-items` route.
+
+- [More](./v-1.0.7.md)
