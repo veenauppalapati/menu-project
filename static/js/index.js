@@ -71,7 +71,7 @@ function addToCart() {
             });
 
             const tFoot = document.getElementsByTagName('tfoot')[0];
-            tFoot.querySelector('td:last-child').textContent = `$${totalPrice}`;
+            tFoot.querySelector('td:last-child').textContent = `$${totalPrice.toFixed(2)}`;
 
             quantityInput.value = 1;
            
