@@ -53,6 +53,8 @@ menu = {
     }
 }
 
+order = []
+
 @app.route("/")
 @app.route("/home")
 def home():
@@ -66,8 +68,8 @@ def get_items():
                 for key, value in items.items() for subkey, subval in (value.items() if isinstance(value, dict) else [(key, value)])]
 
   
-    return jsonify({"items": item_list})
-    
+    return jsonify({"items": item_list}) 
+
 
 
 if __name__ == "__main__":

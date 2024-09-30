@@ -37,7 +37,33 @@
     <div id="data-section">
         <h1 id="category-heading"></h1>
         <div id="items-section"></div>
+        <div id="confirmation-section"></div>
+        
     </div>
+
+    <div id="cart-section">
+        <table id="cart-items" border="1">
+            <thead>
+                <tr>
+                    <th colspan="3"></th>
+                </tr>
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2">Total Amount: <td>          
+                </tr>
+            </tfoot>
+        </table>
+        <button onclick="placeOrder()">PLACE ORDER</button>
+    </div>
+
+    
 
     <!-- Javascript -->
     <script src="{{ url_for('static', filename='js/index.js') }}"></script>

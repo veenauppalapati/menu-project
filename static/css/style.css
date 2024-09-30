@@ -118,6 +118,16 @@ td, th{
 
 #cart-section button{
     margin: 20px;
-    margin-bottom: 50px;   
+    margin-bottom: 50px;  
+}
+
+#confirmation-section{
+    text-align: center;
+    display: none;
+    color: black;
+    font-size: 30px;
+    height: 80vh;
+    font-weight: bold;
+    
 }
 

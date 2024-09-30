@@ -53,3 +53,9 @@
 **Goal**: Implement dynamic functionality for the webpage by fetching data from the backend and integrating it with the existing frontend structure. This version focuses on the implementation of the `/get-items` route.
 
 - [More](./v-1.0.7.md)
+
+### Version 1.0.8
+
+**Goal**:  Implement the "Add to Cart" functionality to enhance user experience by allowing users to easily add items to their cart and receive confirmation when the order is placed.
+
+- [More](./v-1.0.8.md)
