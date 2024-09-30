@@ -51,6 +51,7 @@ function addToCart() {
 
             // Get the parent element of the button (the item container)
             const itemElement = event.target.closest('.items'); 
+            const quantityInput = itemElement.querySelector('.quantity-input');
 
             // Navigate to the item name and price
             const itemName = itemElement.querySelector('.item-name').textContent;
@@ -71,6 +72,8 @@ function addToCart() {
 
             const tFoot = document.getElementsByTagName('tfoot')[0];
             tFoot.querySelector('td:last-child').textContent = `$${totalPrice}`;
+
+            quantityInput.value = 1;
            
         })
     })
